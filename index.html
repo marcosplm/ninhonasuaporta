@@ -1,0 +1,935 @@
+<script>
+
+// PID / Precio
+var item = [
+			[2223	,	3.69],
+			[329	,	3.69],
+			[2226	,	3.69],
+			[331	,	4.69],
+			[2222	,	4.69],
+			[333	,	4.69],
+			[29244	,	6.69]
+			];
+			
+var item_price = new Array(7);			
+
+// Arreglo con toda la info del los items
+// PID | Precio | Precio ABS | Precio Cent | Precio x 12 | Px12 ABS | Px2 Cents						
+for (var i = 0; i < 7; i++) 
+{
+  item_price[i] = new Array() ; 
+  item_price[i][0] = item[i][0];
+  item_price[i][1] = item[i][1];
+  var price = item[i][1].toString().split('.');
+  item_price[i][2] = price[0];
+  item_price[i][3] = price[1];
+  item_price[i][4] = item[i][1] * 12 ;
+  price = (item[i][1]*12).toString().split('.');
+  item_price[i][5] = price[0];
+  item_price[i][6] = price[1];
+  item_price[i][7] = price[2];
+}
+
+</script>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="image/x-icon" href="https://ninhonasuaporta.com.br/favicon.ico?v=1" rel="shortcut icon">
+
+    <title>Nestle Ninho na Sua Porta - Nutrição que não pode faltar</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://ninhonasuaporta.com.br/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for ninho na sua porta -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="vendor/nestle/css/UnicornFlakes.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for ninho na sua porta -->
+    <link href="vendor/nestle/css/nestle.css" rel="stylesheet">
+      
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Navegação
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#ninho-na-sua-porta">Ninho na sua porta</a>
+            </li>
+            <li class="nav-item" style="display:none;">
+              <a class="nav-link js-scroll-trigger" href="#informacao">Informação Nutricional</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#saber">Saber o que tem faz bem</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+		<div class="d-none d-md-block d-lg-block">
+			<div id="header1" style="cursor:pointer;"><img src="https://ninhonasuaporta.com.br/img/header-bg.jpg" width="100%"></div>
+			<div id="header2" style="display:none; cursor:pointer;"><img src="https://ninhonasuaporta.com.br/img/header-bg2.jpg" width="100%"></div>
+		</div>
+		<div class="d-md-none d-lg-none" style="margin-top:40px;">
+			<div id="header3" style="cursor:pointer;"><img src="https://ninhonasuaporta.com.br/img/header1.jpg" width="100%"></div>
+			<div id="header4" style="display:none; cursor:pointer;"><img src="https://ninhonasuaporta.com.br/img/header2.jpg" width="100%"></div>
+		</div>
+        <a class="js-scroll-trigger scroll-down" href="#ninho-na-sua-porta"><img src="https://ninhonasuaporta.com.br/img/scroll.png"></a>
+    </header>
+
+    <!-- Ninho na Sua Porta -->
+    <section id="ninho-na-sua-porta">
+    <form action="https://superlist.com/poster-ninho" method="post" id="ninho-form" style="margin-bottom:0;">
+    <div class="ninho-na-sua-porta-header">
+        <div class="container">
+            <h2>JÁ QUE TODA A NUTRIÇÃO DE LEITE NINHO NÃO PODE FALTAR, ESCOLHA A MANEIRA MAIS FÁCIL DE RECEBER TUDO NA PORTA DA SUA CASA</h2>
+        </div>    
+    </div>  
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_integra.png" height="230">
+            <div class="ninho-item">
+                <h4 data-toggle="modal" href="#informacaoModal1" class="service-heading" style="height:30px; cursor:pointer;">Leite Integral Ninho Tradicional 1L <i class="fa fa-info-circle"></i></h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[0][2]);</script></span><span>,<script>document.write(item_price[0][3]);</script> CADA</span></p>
+                <select id="n1" class="boxes" data-pid="2223">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[0][5]);</script></span><span>,<script>document.write(item_price[0][6]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='2223' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-2223" disabled>ASSINAR</button></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_levinho.png" height="230">
+            <div class="ninho-item">
+                <h4 data-toggle="modal" href="#informacaoModal2" class="service-heading" style="height:30px; cursor:pointer;">Leite Semidesnatado Ninho Levinho 1L <i class="fa fa-info-circle"></i></h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[1][2]);</script></span><span>,<script>document.write(item_price[1][3]);</script> CADA</span></p>
+                <select id="n2" class="boxes" data-pid="329">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[1][5]);</script></span><span>,<script>document.write(item_price[1][6]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='329' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-329" disabled>ASSINAR</button></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_zero.png" height="230">
+            <div class="ninho-item">
+                <h4 data-toggle="modal" href="#informacaoModal3" class="service-heading" style="height:30px; cursor:pointer;">Leite Ninho Zero Lactose Ninho Integral 1L <i class="fa fa-info-circle"></i></h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[3][2]);</script></span><span>,<script>document.write(item_price[3][3]);</script> CADA</span></p>
+                <select id="n3" class="boxes" data-pid="331">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[3][5]);</script></span><span>,<script>document.write(item_price[3][6]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='331' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-331" disabled>ASSINAR</button></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_zero_semi.png" height="230">
+            <div class="ninho-item">
+                <h4 data-toggle="modal" href="#informacaoModal3" class="service-heading" style="height:30px; cursor:pointer;">Leite Ninho Zero Lactose Ninho Semidesnatado 1L <i class="fa fa-info-circle"></i></h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[4][2]);</script></span><span>,<script>document.write(item_price[4][3]);</script> CADA</span></p>
+                <select id="n4" class="boxes" data-pid="22222">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[4][5]);</script></span><span>,<script>document.write(item_price[4][6]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='22222' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-22222" disabled>ASSINAR</button></div>
+            </div>
+          </div> 
+            
+            <div class="col-md-12"><h4 class="text-white text-sub">Experimente também Molico:</h4></div>
+            
+          <div class="col-md-1" style=" width: 12.499999995%; flex: 12.499999995%;max-width: 12.499999995%;">
+        </div>
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/molico-total-calcio-uht.png" height="230">
+            <div class="ninho-item">
+                <h4 data-toggle="modal" href="#informacaoModal4" class="service-heading" style="height:30px; cursor:pointer;">Leite Desnatado Molico Total Cálcio 1L <i class="fa fa-info-circle"></i></h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[0][2]);</script></span><span>,<script>document.write(item_price[0][3]);</script> CADA</span></p>
+                <select id="n5" class="boxes" data-pid="2226">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[0][5]);</script></span><span>,<script>document.write(item_price[0][6]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='2226' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-2226" disabled>ASSINAR</button></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/molico-zero-lactose-uht.png" height="230">
+            <div class="ninho-item">
+                <h4 data-toggle="modal" href="#informacaoModal5" class="service-heading" style="height:30px; cursor:pointer;">Leite Desnatado Molico Zero Lactose 1L <i class="fa fa-info-circle"></i></h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[4][2]);</script></span><span>,<script>document.write(item_price[4][3]);</script> CADA</span></p>
+                <select id="n7" class="boxes" data-pid="333">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[4][5]);</script></span><span>,<script>document.write(item_price[4][6]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='333' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-333" disabled>ASSINAR</button></div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="https://ninhonasuaporta.com.br/img/leites/molico%2Bproteina.png" height="230">
+            <div class="ninho-item">
+                <h4 class="service-heading" style="height:30px;">Leite Desnatado Molico + Proteína 1L</h4>
+                <p class="text-item">R$ <span class="price"><script>document.write(item_price[6][2]);</script></span><span>,<script>document.write(item_price[6][3]);</script> CADA</span></p>
+                <select id="n6" class="boxes" data-pid="29244">
+                    <option value="0">ESCOLHA</option>
+                    <option value="12">12 UNIDADES</option>
+                    <option value="24">24 UNIDADES</option>
+                    <option value="36">36 UNIDADES</option>
+                    <option value="48">48 UNIDADES</option>
+                </select>
+                <p class="text-item-total">R$ <span class="price"><script>document.write(item_price[0][6]);</script></span><span>,<script>document.write(item_price[0][7]);</script></span></p>
+                <div><span class="badge badge-success" style="font-size:14px; margin-right:10px; top: -5px;position: relative;"> Frete Grátis</span><button type="button" data-toggle="modal" data-pid='29244' data-target="#loading" class="btn btn-warning shipping add-boxes add-boxes-29244" disabled>ASSINAR</button></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+                <button type="button" style="cursor:initial;" class="btn btn-warning btn-aditional">Ou se Preferir, personalize seu kit</button>
+          </div>
+            <div id="kit" class="col-md-12">
+                <input type="hidden" name="kit-item-totals" id="kit-item-totals" value="0"/>
+                <input type="hidden" name="kit-item-totals-price" id="kit-item-totals-price" value="0"/>                
+                <h4 class="text-white text-sub">Passo 1 - Escolha a quantidade de itens que compõem o seu kit personalizado:</h4>
+                <div class="row">
+                    <div class="col-12 kit-custom" style="margin-bottom:30px;">
+                        <select id="kit-item-to-add-display">
+                            <option value="0">ESCOLHA</option>
+                            <option value="12">12 UNIDADES</option>
+                            <option value="24">24 UNIDADES</option>
+                            <option value="36">36 UNIDADES</option>
+                            <option value="48">48 UNIDADES</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row" id="kit-item-to-add" style="display:none;">
+                <h4 class="text-white text-sub" style="margin:0 auto; margin-bottom:30px;">Passo 2 - Selecione os itens:</h4>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-03-qty" id="kit-item-03-qty" value="0"/>
+                                <input type="hidden" name="kit-item-03-id" id="kit-item-03-id" value="329"/>
+                                <input type="hidden" name="kit-item-03-price" id="kit-item-03-price" value=""/>
+                                <div class="more-items">
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/ninho_levinho_p.png" class="embed-responsive">
+                                    <p>Leite Levinho Ninho Semidesnatado Tradicional 1L</p>
+                                    <div class="plus-button" id="kit-item-03-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-03-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-03" data-kit="03">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-04-qty" id="kit-item-04-qty" value="0"/>
+                                <input type="hidden" name="kit-item-04-id" id="kit-item-04-id" value="2223"/>
+                                <input type="hidden" name="kit-item-04-price" id="kit-item-04-price" value=""/>
+                                <div class="more-items">
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/ninho_integra_p.png" class="embed-responsive">
+                                    <p>Leite Integral Ninho Tradicional 1L</p>
+                                    <div class="plus-button" id="kit-item-04-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-04-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-04" data-kit="04">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-05-qty" id="kit-item-05-qty" value="0"/>
+                                <input type="hidden" name="kit-item-05-id" id="kit-item-05-id" value="331"/>
+                                <input type="hidden" name="kit-item-05-price" id="kit-item-05-price" value=""/>
+                                <div class="more-items">
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/ninho_zero_p.png" class="embed-responsive">
+                                    <p>Leite Zero Lactose Ninho 1L</p>
+                                    <div class="plus-button" id="kit-item-05-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-05-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-05" data-kit="05">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-06-qty" id="kit-item-06-qty" value="0"/>
+                                <input type="hidden" name="kit-item-06-id" id="kit-item-06-id" value="22222"/>
+                                <input type="hidden" name="kit-item-06-price" id="kit-item-06-price" value=""/>
+                                <div class="more-items">
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/ninho_zero_semi_p.png" class="embed-responsive">
+                                    <p>Leite Zero Lactose Ninho Semidesnatado 1L</p>
+                                    <div class="plus-button" id="kit-item-06-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-06-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-06" data-kit="06">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-01-qty" id="kit-item-01-qty" value="0"/>
+                                <input type="hidden" name="kit-item-01-id" id="kit-item-01-id" value="2226"/>
+                                <input type="hidden" name="kit-item-01-price" id="kit-item-01-price" value=""/>
+                                <div class="more-items" >
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/molico.png" class="embed-responsive">
+                                    <p>Leite Molico Tradicional 1L</p>
+                                    <div class="plus-button" id="kit-item-01-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-01-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-01" data-kit="01">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-02-qty" id="kit-item-02-qty" value="0"/>
+                                <input type="hidden" name="kit-item-02-id" id="kit-item-02-id" value="333"/>
+                                <input type="hidden" name="kit-item-02-price" id="kit-item-02-price" value=""/>
+                                <div class="more-items">
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/molico_zero.png" class="embed-responsive">
+                                    <p>Leite Molico Zero Lactose 1L</p>
+                                    <div class="plus-button" id="kit-item-02-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-02-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-02" data-kit="02">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <input type="hidden" name="kit-item-07-qty" id="kit-item-07-qty" value="0"/>
+                                <input type="hidden" name="kit-item-07-id" id="kit-item-07-id" value="29244"/>
+                                <input type="hidden" name="kit-item-07-price" id="kit-item-07-price" value=""/>
+                                <div class="more-items">
+                                    <img src="https://ninhonasuaporta.com.br/img/leites/molico%2Bproteina_p.png" class="embed-responsive">
+                                    <p>Leite Desnatado Molico + Proteína 1L</p>
+                                    <div class="plus-button" id="kit-item-07-add"><i class="fa fa-plus-circle"></i></div>
+                                    <div class="minus-button" id="kit-item-07-remove"><i class="fa fa-minus-circle"></i></div>
+                                <select id="kit-07" data-kit="07">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="24">24</option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="text-white text-sub" style="margin:0 auto; margin-bottom:30px;">Passo 3 - Assine:</h4>
+                    <div class="col-md-12">
+                        
+                        <!-- HIDE WHEN 12, 24, 36 or 48 ITEMS -->
+                        <div class="alert alert-warning">
+                        <p style="margin-bottom:0;">Ainda faltam <strong id="item-countdown">12</strong> itens para finalizar o seu kit personalizado.</p>
+                        </div>
+                        <!-- HIDE ONLY WHEN 12, 24, 36 or 48 ITEMS -->
+                        
+                        <div style="total-price-display">
+                            <p class="text-price-item">R$ <span id="totalprice" class="price"><?php echo $sumitem; ?></span></p>
+                            
+                            <!-- ENABLE ONLY WHEN 12, 24, 36 or 48 ITEMS -->
+                            <button type="button" id="add-custom-box" style="display: none;" data-toggle="modal" data-target="#loading" class="btn btn-warning-sm add-boxes add-boxes-custom-kit">ASSINAR</button>
+                            <!-- ENABLE ONLY WHEN 12, 24, 36 or 48 ITEMS -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <div class="d-none d-md-block d-lg-block"><img src="https://ninhonasuaporta.com.br/img/bg-footer.png" width="100%"></div>
+    <div class="d-md-none d-lg-none"><img src="https://ninhonasuaporta.com.br/img/bg-footer-m.png" width="100%"></div>
+    <input type="hidden" name="selected-box-type" id="selected-box-type" value=''/>
+    <input type="hidden" name="selected-box-qty" id="selected-box-qty" value=''/>
+    <input type="hidden" name="loja-url" id="loja-url" value='https://superlist.com/destaque/nestle/' />
+    <input type="hidden" name="ARSTVIFNNSP" id="ARSTVIFNNSP" value='vf=4olz5ulI76*k' /> 
+    </form>
+    </section>
+
+    <!-- Informação Nutricional -->
+    <section class="bg-light" id="informacao">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Há mais de 70 anos, NINHO é especialista em nutrição na infância. Ao longo dessa história, o jeito de viver a infância mudou. Mas,
+a essência continua a mesma. Assim como o cuidado da mãe de NINHO.
+</h2>
+              
+        <div class="row" style="margin:30px auto; max-width: 780px;">
+            <div class="col-12 text-center video-container"><iframe src="https://www.youtube.com/embed/rtx12mBhiKI?rel=0" frameborder="0" allowfullscreen class="video"></iframe></div>  
+        </div>
+          </div>
+            
+        </div>
+        <div class="row text-center" style="display:none;">
+           <div class="col-md-4">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_integra.png" height="230">
+            <div class="ninho-item">
+                <h4 class="service-heading-15">Conheça o Leite NINHO® Forti+ Integral na versão Líquida UHT. Todo o delicioso sabor e nutrição FORTIFICADA de Ninho, em embalagem prática, com a qualidade Nestlé que você conhece e confia.</h4>
+                <button type="button" class="btn btn-warning" data-toggle="modal" href="#informacaoModal1">Informações</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_levinho.png" height="230">
+            <div class="ninho-item">
+                <h4 class="service-heading-15">O NINHO® que as mães brasileiras já conhecem e aprovam, em uma versão com 60% a menos de gorduras. Assim como o NINHO® tradicional, a versão NINHO® Levinho também é rico em Ferro e Vitaminas C, A e D, sendo uma opção para a alimentação equilibrada das crianças.</h4>
+                <button type="button" class="btn btn-warning" data-toggle="modal" href="#informacaoModal2">Informações</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="https://ninhonasuaporta.com.br/img/leites/ninho_zero2.png" height="230">
+            <div class="ninho-item">
+                <h4 class="service-heading-15">Todo o sabor, qualidade e nutrientes de NINHO® Forti+, na versão 0% Lactose. NINHO® Forti i+ Zero Lactose, além de fonte de Cálcio, é rico em Ferro, Zinco e Vitaminas C, A e D. Não é à toa que NINHO® é o grande aliado da boa nutrição das crianças.
+</h4>
+                <button type="button" class="btn btn-warning" data-toggle="modal" href="#informacaoModal3">Informações</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saber o Que Tem Faz Bem -->
+    <section id="saber">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <img src="https://ninhonasuaporta.com.br/img/slogan_g.png" style="width:100%; max-width:369px;">
+              <h2 class="section-heading text-white">Nós fazemos NINHO® com o mesmo carinho, cuidado e dedicação que você faria.</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+              <div class="title-item-dedicao text-center">
+                <img src="https://ninhonasuaporta.com.br/img/lbl-bg.png" width="100%;">
+                <h2 class="arc-text">
+                    <span class="char1" style="display: inline-block; transition: none; transform: translateX(0px) translateY(10px) rotate(-13deg);">P</span><span class="char2" style="display: inline-block; transition: none; transform: translateX(0px) translateY(8px) rotate(-11deg);">A</span><span class="char3" style="display: inline-block; transition: none; transform: translateX(0px) translateY(5px) rotate(-9deg);">I</span><span class="char4" style="display: inline-block; transition: none; transform: translateX(0px) translateY(4px) rotate(-8deg);">X</span><span class="char5" style="display: inline-block; transition: none; transform: translateX(0px) translateY(2px) rotate(-6deg);">Ã</span><span class="char6" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(-5deg);">O</span><span class="char7" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(-3deg);">&nbsp;</span><span class="char8" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(-2deg);">P</span><span class="char9" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">O</span><span class="char10" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">R</span><span class="char11" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(2deg);">&nbsp;</span><span class="char12 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(3deg);">Q</span><span class="char13" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(4deg);">U</span><span class="char14" style="display: inline-block; transition: none; transform: translateX(0px) translateY(2px) rotate(6deg);">A</span><span class="char15 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(3px) rotate(7deg);">L</span><span class="char16" style="display: inline-block; transition: none; transform: translateX(0px) translateY(4px) rotate(8deg);">I</span><span class="char17" style="display: inline-block; transition: none; transform: translateX(0px) translateY(5px) rotate(9deg);">D</span><span class="char18" style="display: inline-block; transition: none; transform: translateX(0px) translateY(7px) rotate(10deg);">A</span><span class="char19" style="display: inline-block; transition: none; transform: translateX(0px) translateY(8px) rotate(11deg);">D</span><span class="char20" style="display: inline-block; transition: none; transform: translateX(0px) translateY(10px) rotate(13deg);">E</span></h2>
+            </div>
+              <div style="padding:20px;">
+                <h4 class="text-center text-white">Todo leite NINHO® passa por mais de 500 análises, desde a sua coleta na fazenda até chegar no ponto de venda. Isso garante o alto padrão de qualidade e pureza do leite.</h4>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="title-item-dedicao text-center">
+                <img src="https://ninhonasuaporta.com.br/img/lbl-bg.png" width="100%;">
+                <h2 class="arc-text">
+                    <span class="char1" style="display: inline-block; transition: none; transform: translateX(0px) translateY(10px) rotate(-13deg);">P</span><span class="char2" style="display: inline-block; transition: none; transform: translateX(0px) translateY(8px) rotate(-11deg);">R</span><span class="char3" style="display: inline-block; transition: none; transform: translateX(0px) translateY(5px) rotate(-9deg);">O</span><span class="char4" style="display: inline-block; transition: none; transform: translateX(0px) translateY(4px) rotate(-8deg);">D</span><span class="char5" style="display: inline-block; transition: none; transform: translateX(0px) translateY(2px) rotate(-6deg);">U</span><span class="char6" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(-5deg);">Z</span><span class="char7" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(-3deg);">I</span><span class="char8" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(-2deg);">D</span><span class="char9" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">O</span><span class="char10" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">&nbsp;</span><span class="char11" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(2deg);">C</span><span class="char12 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(3deg);">O</span><span class="char13" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(4deg);">M</span><span class="char14" style="display: inline-block; transition: none; transform: translateX(0px) translateY(2px) rotate(6deg);">&nbsp;</span><span class="char15 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(3px) rotate(7deg);">C</span><span class="char16" style="display: inline-block; transition: none; transform: translateX(0px) translateY(4px) rotate(8deg);">A</span><span class="char17" style="display: inline-block; transition: none; transform: translateX(0px) translateY(5px) rotate(9deg);">R</span><span class="char18" style="display: inline-block; transition: none; transform: translateX(0px) translateY(7px) rotate(10deg);">I</span><span class="char19" style="display: inline-block; transition: none; transform: translateX(0px) translateY(8px) rotate(11deg);">N</span><span class="char20" style="display: inline-block; transition: none; transform: translateX(0px) translateY(10px) rotate(13deg);">H</span><span class="char21" style="display: inline-block; transition: none; transform: translateX(0px) translateY(13px) rotate(15deg);">O</span></h2>
+            </div>
+              <div style="padding:20px;">
+                <h4 class="text-center text-white">Em nossas 7 fábricas todo cuidado é pouco! O leite só entra na fábrica depois de passar por 3 horas de análise de qualidade. E depois, não há nenhum contato externo, assegurando a pureza do seu leite.</h4>
+              </div>
+          </div>
+          <div class="col-md-4">
+              <div class="title-item-dedicao text-center">
+                <img src="https://ninhonasuaporta.com.br/img/lbl-bg.png" width="100%;">
+                <h2 class="arc-text">
+                    <span class="char1" style="display: inline-block; transition: none; transform: translateX(0px) translateY(10px) rotate(-13deg);">C</span><span class="char2" style="display: inline-block; transition: none; transform: translateX(0px) translateY(8px) rotate(-11deg);">U</span><span class="char3" style="display: inline-block; transition: none; transform: translateX(0px) translateY(5px) rotate(-9deg);">I</span><span class="char4" style="display: inline-block; transition: none; transform: translateX(0px) translateY(4px) rotate(-8deg);">D</span><span class="char5" style="display: inline-block; transition: none; transform: translateX(0px) translateY(2px) rotate(-6deg);">A</span><span class="char6" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(-5deg);">D</span><span class="char7" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(-3deg);">O</span><span class="char8" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(-2deg);">&nbsp;</span><span class="char9" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">D</span><span class="char10" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(0deg);">E</span><span class="char11" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(2deg);">S</span><span class="char12 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(0px) rotate(3deg);">D</span><span class="char13" style="display: inline-block; transition: none; transform: translateX(0px) translateY(1px) rotate(4deg);">E</span><span class="char14" style="display: inline-block; transition: none; transform: translateX(0px) translateY(2px) rotate(6deg);">&nbsp;</span><span class="char15 empty" style="display: inline-block; transition: none; transform: translateX(0px) translateY(3px) rotate(7deg);">A</span><span class="char16" style="display: inline-block; transition: none; transform: translateX(0px) translateY(4px) rotate(8deg);">&nbsp;</span><span class="char17" style="display: inline-block; transition: none; transform: translateX(0px) translateY(5px) rotate(9deg);">O</span><span class="char18" style="display: inline-block; transition: none; transform: translateX(0px) translateY(7px) rotate(10deg);">R</span><span class="char19" style="display: inline-block; transition: none; transform: translateX(0px) translateY(8px) rotate(11deg);">I</span><span class="char20" style="display: inline-block; transition: none; transform: translateX(0px) translateY(10px) rotate(13deg);">G</span><span class="char21" style="display: inline-block; transition: none; transform: translateX(0px) translateY(13px) rotate(15deg);">E</span><span class="char22" style="display: inline-block; transition: none; transform: translateX(0px) translateY(17px) rotate(18deg);">M</span></h2>
+            </div>
+              <div style="padding:20px;">
+                <h4 class="text-center text-white">100% do nosso leite é rastreado e transportado só em caminhões lacrados, sem contato externo, chegando a caixinha em 48 horas.</h4>
+              </div>
+          </div>
+            <div class="col-12">
+            <h2 class="section-heading" style="text-align:center;">Perguntas Frequentes</h2><Br>
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse0">
+                    Qual é o valor do frete? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse in">
+                  <div class="panel-body">O frete é gratuito</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                    Qual é a quantidade mínima por pedido? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body">A quantidade mínima por pedido no Ninho na Sua Porta é de 12 unidades.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    Quais são as formas de pagamento aceitas? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">Aceitamos todos os cartões de crédito, Paypal, Boleto bancário ou também vale-alimentação: Alimentação Pass, Premium Pass ou Gift Pass Sodexo. *Para compras utilizando cupom de desconto de 100% (1º mês grátis), deverá ser cadastrado um cartão de crédito para garantir a assinatura do clube.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                    Qual é a região de entrega? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">Entregamos nas cidades de São Paulo, Alphaville, Diadema, Granja Viana, Guarulhos,  Osasco, Santo André, São Bernardo, São Caetano, Campinas, Hortolândia, Indaiatuba, Itu,  Jundiaí, Salto, Valinhos e Vinhedo.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    Qual é o prazo de entrega? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                  <div class="panel-body">Você receberá seu pedido em até cinco dias úteis. No dia da entrega, uma mensagem de SMS será enviada ao celular cadastrado avisando que seu pedido está a caminho.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                    Em quais horários e dias da semana as entregas são feitas? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                  <div class="panel-body">As entregas na Grande São Paulo são feitas de segunda à sexta-feira, das 8h às 21h; e aos sábados, das 8h às 14h. 
+As entregas para as cidades do interior de São Paulo são feitas de segunda a sexta-feira, das 8h até às 18h.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+                    O entregador vai entrar no condomínio e deixar as compras na minha casa ou no meu apartamento? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                  <div class="panel-body">Cada condomínio tem regras e procedimentos de segurança exclusivos. Por essa razão, nossa entrega será realizada na portaria.</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+                    O que fazer, caso queira cancelar minha assinatura? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                  <div class="panel-body">Você pode cancelar a sua assinatura a qualquer momento, sem precisar pagar nada. Basta entrar em contato com a Superlist, por meio do chat ou por um dos canais de de atendimento ao cliente abaixo.
+<br><br>Telefone: 0800-942-9262
+<br>Whatsapp: 11 94899-2985
+<br>E-mail: sac@superlist.com
+</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+                    Em caso de necessidade, como faço para trocar produtos recebidos? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse">
+                  <div class="panel-body">Basta entrar em contato com a Superlist, por meio do chat ou por um dos canais de de atendimento ao cliente abaixo.
+<br><br>Telefone: 0800-942-9262
+<br>Whatsapp: 11 94899-2985
+<br>E-mail: sac@superlist.com
+</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+                    Se algum produto vier avariado, o que faço? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse">
+                  <div class="panel-body">A troca de produtos pode acontecer nos seguintes casos: por avaria/dano na embalagem ou por envio de item errado. Para isso, basta que você entre em contato com a Superlist, por meio de um dos canais de de atendimento ao cliente abaixo. Sua solicitação será solucionada em até sete dias.
+<br><br>Telefone: 0800-942-9262
+<br>Whatsapp: 11 94899-2985
+<br>E-mail: sac@superlist.com
+</div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                    Qual é o horário de atendimento ao consumidor da Superlist? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <div class="panel-body">O atendimento pessoal ao consumidor da Superlist ocorre de segunda à sexta-feira, das 9h às 17h.
+<br><br>Telefone: 0800-942-9262
+<br>Whatsapp: 11 94899-2985
+<br>E-mail: sac@superlist.com
+</div>
+                </div>
+              </div>
+                 <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">  
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+                    Com qual frequência posso receber as minhas compras? <i class="fa fa-chevron-down"></i></a>
+                  </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                  <div class="panel-body">
+                      Ninho na Sua Porta é um clube por assinatura e você poderá receber suas compras a cada 30 ou 60 dias.
+                  </div>
+                </div>
+              </div>
+            </div>  
+        </div>
+            <div class="col-12">
+                <img src="https://ninhonasuaporta.com.br/img/legal.png" width="100%;">
+            </div>
+            <div class="col-12 text-center" style="margin-top:40px;"><a class="js-scroll-trigger" href="#ninho-na-sua-porta"><button type="button" data-toggle="collapse" data-target="#kit" class="btn btn-warning btn-aditional">Comprar Agora <i class="fa fa-chevron-up"></i></button></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="text-center text-white footer-text">Este site e sua operação, é de inteira responsabilidade da Recommerce Serviços Comércio e Atividades de Internet Ltda, parceiro Nestlé Brasil Ltda.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    <!-- Modals -->
+
+    <!-- Modal 1 -->
+    <div class=" modal fade" id="informacaoModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Content Details Go Here -->
+                  <h2>Leite Líquido NINHO Integral</h2>
+                    <p>Conheça o Leite NINHO® Forti+ Integral na versão Líquida UHT. Todo o delicioso sabor e nutrição FORTIFICADA de Ninho, em embalagem prática, com a qualidade Nestlé que você conhece e confia.</p>
+                  <img class="img-fluid d-block mx-auto" src="https://ninhonasuaporta.com.br/img/infos/ninho_forti_1L_integral.jpg" alt="">
+                  <p>Leite integral, vitaminas (A, D e C) e minerais (ferro e zinco) e estabilizantes trifosfato de sódio, monofosfato de sódio, difosfato de sódio e citrato de sódio. NÃO CONTÉM GLÚTEN. ALÉRGICOS: CONTÉM LEITE.</p>
+                  <button class="btn btn-info" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class=" modal fade" id="informacaoModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Content Details Go Here -->
+                  <h2>Leite Líquido NINHO Levinho</h2>
+                    <p>O NINHO® que as mães brasileiras já conhecem e aprovam, em uma versão com 60% a menos de gorduras. Assim como o NINHO® tradicional, a versão NINHO® Levinho também é rico em Ferro e Vitaminas C, A e D, sendo uma opção para a alimentação equilibrada das crianças.</p>
+                  <img class="img-fluid d-block mx-auto" src="https://ninhonasuaporta.com.br/img/infos/NinhoFortMaisLevinho.jpg" alt="">
+                  <p>Leite semi-desnatado com 1,55% de gordura, vitaminas (C, A e D), pirofosfato férrico e estabilizantes trifosfato de sódio, monofosfato de sódio, difosfato de sódio e citrato de sódio. NÃO CONTÉM GLÚTEN. ALÉRGICOS: CONTÉM LEITE.</p>
+                  <button class="btn btn-info" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class=" modal fade" id="informacaoModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Content Details Go Here -->
+                  <h2>Leite Líquido NINHO Zero Lactose</h2>
+                    <p>Todo o sabor, qualidade e nutrientes de NINHO® Forti+, na versão 0% Lactose. NINHO® Forti i+ Zero Lactose, além de fonte de Cálcio, é rico em Ferro, Zinco e Vitaminas C, A e D. Não é à toa que NINHO® é o grande aliado da boa nutrição das crianças.</p>
+                  <img class="img-fluid d-block mx-auto" src="https://ninhonasuaporta.com.br/img/infos/Compass_NinhoFortMaisZeroLactose.jpg" alt="">
+                  <p>Leite integral, enzima lactase, vitaminas A, D e C (acetato de retilina, colecalciferol e L-ácido ascórbico) e minerais ferro e zinco (pirofosfato férrico e sulfato de zinco) e estabilizantes trifosfato de sódio, monofosfato de sódio, difosfato de sódio e citrato de sódio. NÃO CONTÉM GLÚTEN. ALÉRGICOS: CONTÉM LEITE.</p>
+                  <button class="btn btn-info" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class=" modal fade" id="informacaoModal4" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Content Details Go Here -->
+                  <h2>Leite Molico Total Cálcio Uht</h2>
+                    <p>MOLICO é um leite desnatado, rico em cálcio e vitaminas D, K e C que contribuem para a manutenção óssea.</p>
+                  <img class="img-fluid d-block mx-auto" src="https://ninhonasuaporta.com.br/img/infos/molico-total-calcio-uht.jpg" alt="">
+                  <p>Leite desnatado, mineral (fosfato tricálcico), vitaminas (D, K e C) e estabilizantes trifosfato de sódio, monofosfato de sódio, difosfato de sódio e citrato de sódio. NÃO CONTÉM GLÚTEN. ALÉRGICOS: CONTÉM LEITE.</p>
+                  <button class="btn btn-info" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class=" modal fade" id="informacaoModal5" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Content Details Go Here -->
+                  <h2>Leite Molico Zero Lactose Uht</h2>
+                    <p>A mesma leveza e nutrição de Molico agora na versão Zero Lactose</p>
+                  <img class="img-fluid d-block mx-auto" src="https://ninhonasuaporta.com.br/img/infos/molico-zero-lactose-uht.jpg" alt="">
+                  <p>Leite desnatado, fosfato tricálcico, enzima lactase, vitaminas D, K e C (colecalciferol, fitomenadiona e ascorbato de sódio) e estabilizantes trifosfato de sódio, monofosfato de sódio, difosfato de sódio e citrato de sódio. NÃO CONTÉM GLÚTEN. ALÉRGICOS: CONTÉM LEITE.</p>
+                  <button class="btn btn-info" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class=" modal fade" id="informacaoModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Content Details Go Here -->
+                  <h2>Leite Molico + Proteína Uht</h2>
+                    <p>MOLICO é um leite desnatado, rico em cálcio e vitaminas D, K e C que contribuem para a manutenção óssea.</p>
+                  <img class="img-fluid d-block mx-auto" src="https://ninhonasuaporta.com.br/img/infos/molico-total-calcio-uht.jpg" alt="">
+                  <p>Leite desnatado, mineral (fosfato tricálcico), vitaminas (D, K e C) e estabilizantes trifosfato de sódio, monofosfato de sódio, difosfato de sódio e citrato de sódio. NÃO CONTÉM GLÚTEN. ALÉRGICOS: CONTÉM LEITE.</p>
+                  <button class="btn btn-info" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" modal fade" id="loading" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <center><h2>Concluir Assinatura</h2></center>
+                  <div class="modal-body text-center">
+                    <span  id="loading-message" style="font-size: 10px;position: absolute;left: 43%;top: 19%;">Carregando...</span>
+                    <div class="loader-sl" id="submit-message" style="font-size: 10px !important;"></div>
+                    <p>Você será redirecionado para <strong>www.superlist.com</strong> para finalizar a sua assinatura. Se você não for redirecionado automaticamente após 5 segundos, clique em continuar.</p>
+                    <button class="btn btn-info" id="continue" type="button">continuar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://ninhonasuaporta.com.br/vendor/jquery/jquery.min.js"></script>
+    <script src="https://ninhonasuaporta.com.br/vendor/popper/popper.min.js"></script>
+    <script src="https://ninhonasuaporta.com.br/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://ninhonasuaporta.com.br/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for ninho na sua porta -->  
+    <script src="vendor/nestle/js/ninho.js"></script>
+    <script src="vendor/nestle/js/interactions.js"></script>
+
+  </body>
+</html>
